@@ -10,40 +10,50 @@ public class GitTest {
         System.out.println("hot-fix Test");
         System.out.println("push Test");
         System.out.println("pull Test");
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<body>
-		<div id="timer" style="color: red"></div>
-	</body>
-	<script type="text/javascript">
-	var oBox=document.getElementById("timer");
-	var maxtime=6*60;
+public class Test {
 
-	function CountDown()
-	{
-	 
-	 
-	 if(maxtime>-1)
-	 {
-	  minutes=Math.floor(maxtime/60);
-	  second=Math.floor(maxtime%60);
-	  msg="距离结束还有"+minutes+"分"+second+"秒";
-	  oBox.innerHTML=msg;
-	  if(maxtime==5*60) arert="还剩5分钟";
-	  --maxtime;
-	 }
-	 else
-	 {
-	   clearInterval(timer);
-	 }
+	public static void main(String[] args) {
+		
+		Test.Inner1 test1=new Test().new Inner1 ();
+		Test.Inner2 test2=new Test.Inner2();
+		System.out.println(test1.fun());
+		System.out.println(test2.fun());
+		
+		
+		Op opp=new Op(){
+			public void opp() {
+				;
+			}
+		};
+		
+		
 	}
-	timer = setInterval("CountDown()",1000);
-	</script>
-</html>
+	
+	
+	static int a=011;
+	 int v=100;
+	
+	 class Inner1{
+		int b=10;
+		 int v=100;
+		int fun() {
+		System.out.println(v);
+	   System.out.println(Test.this.v);
+			return a;
+		}
+	}
+	
+	static class Inner2{
+		int b=10;
+		 
+		int fun() {
+	System.out.println();
+	System.out.println(b);
+			return a;
+		}
+	}
 
-    }
 }
+    interface Op{
+    	void opp();
+    }
